@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+void input_mat(int a[9][9]);
+bool is_valid(int a[9][9]);
 void find_next(int *r, int *c);
 bool check_row(int r, int c, int a[9][9]);
 bool check_col(int r, int c, int a[9][9]);
@@ -11,8 +13,6 @@ bool new_assign(int a[9][9], int r, int c);
 bool unassigned(int a[9][9]);
 void solve(int a[9][9], int r, int c);
 int calc_box(int r, int c, int a[9][9]);
-bool is_valid(int a[9][9]);
-void input_mat(int a[9][9]);
 void output_mat(int a[9][9]);
 
 int main()
@@ -21,7 +21,7 @@ int main()
     input_mat(a);
     if (!is_valid(a))
     {
-        cout << "invalid sudoku\n";
+        cout << "Invalid sudoku" << endl;
         exit(0);
     }
     solve(a, 0, 0);
@@ -69,7 +69,7 @@ bool assign(int a[9][9], int r, int c)
 bool new_assign(int a[9][9], int r, int c)
 {
     int i;
-    for (i =a[r][c]+1; i <= 9; i++)
+    for (i = a[r][c] + 1; i <= 9; i++)
     {
         a[r][c] = i;
         if (is_safe(r, c, a))
@@ -88,18 +88,20 @@ void solve(int a[9][9], int r, int c)
     {
         if (a[r][c] == 0)
         {
-          x:  if (new_assign(a, r, c))
+        x:
+            if (new_assign(a, r, c))
             {
                 int new_r = r, new_c = c;
                 find_next(&new_r, &new_c);
-                solve(a, new_r, new_c);     //1
+                solve(a, new_r, new_c); // 1
                 if (unassigned(a))
                 {
                     goto x;
                 }
             }
             else
-            {   a[r][c]=0;
+            {
+                a[r][c] = 0;
                 return;
             }
         }
@@ -108,7 +110,7 @@ void solve(int a[9][9], int r, int c)
         {
             int new_r = r, new_c = c;
             find_next(&new_r, &new_c);
-            solve(a, new_r, new_c); //2
+            solve(a, new_r, new_c); // 2
         }
     }
 }
@@ -303,7 +305,7 @@ bool is_valid(int a[9][9])
         for (j = 1; j <= 9; j++)
             if (c[j] > 1)
             {
-                cout << "same row\n";
+                cout << "Same row" << endl;
                 return false;
             }
     }
@@ -315,7 +317,7 @@ bool is_valid(int a[9][9])
         for (j = 1; j <= 9; j++)
             if (c[j] > 1)
             {
-                cout << "same col\n";
+                cout << "Same column" << endl;
                 return false;
             }
     }
@@ -332,7 +334,7 @@ bool is_valid(int a[9][9])
         for (j = 1; j < 10; j++)
             if (c[i][j] > 1)
             {
-                cout << "same box\n";
+                cout << "Same box" << endl;
                 return false;
             }
 
