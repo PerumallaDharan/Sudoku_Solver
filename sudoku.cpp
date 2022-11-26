@@ -27,7 +27,7 @@ int main()
     solve(a, 0, 0);
     if (unassigned(a))
     {
-        cout << "Sudoku cannot be solved"<<endl;
+        cout << "Sudoku cannot be solved" << endl;
         exit(0);
     }
 
@@ -251,7 +251,7 @@ bool is_safe(int r, int c, int a[9][9])
 
 void input_mat(int a[9][9])
 {
-    cout << "Enter the unsolved sudoku matrix (0 for empty places)"<<endl;
+    cout << "Enter the unsolved sudoku matrix (0 for empty places)" << endl;
     int i, j;
     for (i = 0; i < 9; i++)
         for (j = 0; j < 9; j++)
@@ -260,7 +260,8 @@ void input_mat(int a[9][9])
 
 void output_mat(int a[9][9])
 {
-    cout << "Resultant sudoku is:"<<endl<<endl;
+    cout << "Resultant sudoku is:" << endl
+         << endl;
     int i, j, m = 0, n = 0;
     for (i = 0; i < 9; i++)
     {
