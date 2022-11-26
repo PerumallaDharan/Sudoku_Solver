@@ -1,5 +1,5 @@
 # Suduko_Solver_Project
-Sudoku-Solver
+
 Sudoku Solver using backtracking in C++
 
 
