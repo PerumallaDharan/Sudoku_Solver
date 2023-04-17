@@ -19,8 +19,8 @@
 - Output – A solved sudoku  
 
 ## Team Members
-- [Perumalla Dharan] (https://github.com/PerumallaDharan)
-- [Dinesh Grandhi] (https://github.com/dinesh-grandhi)
+- [Perumalla Dharan](https://github.com/PerumallaDharan)
+- [Dinesh Grandhi](https://github.com/dinesh-grandhi)
 
 ## Contributing
 - Contributions are welcome! Please feel free to open a pull request or submit an issue if you find any bugs or want to add new features.
