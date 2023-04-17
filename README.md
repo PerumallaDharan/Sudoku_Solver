@@ -18,6 +18,10 @@
 - Input – A partially filled 9*9 matrix representing unsolved sudoku with 0 at empty places.  
 - Output – A solved sudoku  
 
+## Team Members
+- Perumalla Dharan [Github](https://github.com/PerumallaDharan)
+- Dinesh Grandhi [Github](https://github.com/dinesh-grandhi)
+
 ## Contributing
 - Contributions are welcome! Please feel free to open a pull request or submit an issue if you find any bugs or want to add new features.
 
